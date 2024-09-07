@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <title>Screen Size Visualizer</title>
+</head>
+<body>
+    <h1>Screen Size Visualizer</h1>
+    <h4>set to fullscreen for a better experience</h3>
+    <div id="background"></div>
+    <img id="home_btn" src="/assets/images/home.png">
+    <div id="screen_sim">
+        <video id="screen_capture" autoplay playsinline></video>
+        <p></p>
+        <svg width="100%" height="100%">
+            <line x1="0" y1="100%" x2="100%" y2="0" style="stroke:rgba(0, 0, 0, 0.7);stroke-width:4" />
+        </svg>
+    </div>
+    <div id="setup_box">
+        <p>Size</p>
+        <input class="textbox" type="text" placeholder='ex: 7"'>
+        <p>Aspect ratio</p>
+        <input class="textbox" type="text" placeholder="ex: 16:9">
+        <p id="setup_alert"></p>
+        <div>
+            <p>Desktop viewport</p>
+            <input id="desktop_checkbox" type="checkbox" />
+        </div>
+        <input id="simulate_btn" class="button" type="button" value="Simulate" />
+    </div>
+</body>
+</html>
