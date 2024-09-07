@@ -18,7 +18,7 @@ function initialView() {
 
 function addEvents() {
     document.getElementById("home_btn").addEventListener("click", () => {
-        window.location.href = "../index.html";
+        window.location.href = "/makertools/index.html";
     });
     
     simulate_btn.addEventListener("click", async () => {
