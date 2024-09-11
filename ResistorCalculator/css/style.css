@@ -1,0 +1,177 @@
+body {
+    background-color: whitesmoke;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+}
+
+#home_btn {
+    position: fixed;
+    top: 4vh;
+    left: 1vw;
+    width: 2%;
+    transition: 0.5s;
+}
+
+span {
+    color: white;
+    margin-right: 10px;
+}
+
+label {
+    color: white;
+}
+
+#container {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Resistor_3_strips {
+
+    width: 30%;
+    height: 70%;
+
+}
+
+#resistorToColor {
+    width: 30%;
+    height: 70%;
+}
+
+#v0 {
+    width: 20px;
+}
+
+#home_btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.button {
+    width: 120px;
+    height: 50px;
+    background-color: grey;
+    border: none;
+    line-height: 0;
+    color: white;
+    padding: 20px;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background-color: lightgrey;
+    transition: 0.7s;
+}
+
+.button:active {
+    background-color: blue;
+    transition: 0.1s;
+}
+
+.textbox {
+    width: 85%;
+    height: 25px;
+    background-color: #C0C0C0;
+    border: none;
+    color: black;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.textbox:focus {
+    outline: none;
+    background-color: white;
+    transition: 0.7s;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+#screen_sim {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: grey;
+}
+
+#screen_sim>p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-28deg);
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#screen_capture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#setup_box {
+    position: fixed;
+    top: 10%;
+    right: -15%;
+    width: 15%;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: right 0.7s;
+}
+
+#setup_box:hover,
+#setup_box.hover {
+    right: 1%;
+    transition: right 0.7s;
+}
+
+#setup_alert {
+    color: red;
+}
+
+#setup_box div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hidden {
+    display: none !important;
+}

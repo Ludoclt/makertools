@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <title>Resistor Calculator</title>
+</head>
+
+<body>
+    <h1>Resistor Calculator</h1>
+
+    <div id="background"></div>
+    <img id="home_btn" src="../assets/images/home.png">
+    <div id="container">
+        <div id="Resistor_3_strips">
+
+            <div id="rendu">
+                <span id="Selection_1">0</span><span id="Selection_2">0</span><span id="Selection_3">0</span><span
+                    id="Selection_4">0</span><span id="Selection_5">0</span>
+                <h3 id="Value"></h3>
+
+            </div>
+
+            <div id="segment">
+                <input type="button" value="line_1" id="line_1" />
+                <input type="button" value="line_2" id="line_2" />
+                <input type="button" value="line_3" id="line_3" />
+                <input type="button" value="line_4" id="line_4" />
+                <input type="button" value="line_5" id="line_5" />
+
+            </div>
+
+            <div id="color_button">
+                <img id="none" src="../assets/images/colors/none.png">
+                <img id="black" src="../assets/images/colors/black.png">
+                <img id="brown" src="../assets/images/colors/brown.png">
+                <img id="red" src="../assets/images/colors/red.png">
+                <img id="orange" src="../assets/images/colors/orange.png">
+                <img id="yellow" src="../assets/images/colors/yellow.png">
+                <img id="green" src="../assets/images/colors/green.png">
+                <img id="blue" src="../assets/images/colors/blue.png">
+                <img id="purple" src="../assets/images/colors/purple.png">
+                <img id="grey" src="../assets/images/colors/grey.png">
+                <img id="white" src="../assets/images/colors/white.png">
+                <img id="gold" src="../assets/images/colors/gold.png">
+                <img id="silver" src="../assets/images/colors/silver.png">
+
+            </div>
+
+            <input type="button" value="calculate" id="calculate" class="button" />
+        </div>
+
+        <div id="resistorToColor">
+
+            <form>
+                <label for="resistance_value">Resistance value :</label>
+                <input type="number" placeholder="Ω" id="resistance_value" name="resistance">
+                <select name="precision" id="resistance_precision">
+                    <option value="">--Please choose a precision--</option>
+                    <option value="1">1%</option>
+                    <option value="2">2%</option>
+                    <option value="0.5">0.5%</option>
+                    <option value="0.25">0.25%</option>
+                    <option value="0.1">0.1%</option>
+                    <option value="0.05">0.05%</option>
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                </select>
+
+                <input type="button" value="calculate" id="calculate_colors" class="button" />
+
+            </form>
+
+            <span id="color_0">_</span><span id="color_1">_</span><span id="color_2">_</span><span id="color_3">_</span>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
