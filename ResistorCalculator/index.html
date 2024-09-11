@@ -14,7 +14,7 @@
     <div id="background"></div>
     <img id="home_btn" src="../assets/images/home.png">
     <div id="container">
-        <div id="Resistor_3_strips">
+        <div id="Resistor_strips" class="half">
 
             <div id="rendu">
                 <span id="Selection_1">0</span><span id="Selection_2">0</span><span id="Selection_3">0</span><span
@@ -49,15 +49,22 @@
 
             </div>
 
-            <input type="button" value="calculate" id="calculate" class="button" />
         </div>
 
-        <div id="resistorToColor">
+        <div id="separator">
+
+        </div>
+
+        <div id="resistorToColor" class="half">
+            <div id="output">
+                <span id="color_0">_</span><span id="color_1">_</span><span id="color_2">_</span><span
+                    id="color_3">_</span>
+            </div>
 
             <form>
                 <label for="resistance_value">Resistance value :</label>
-                <input type="number" placeholder="Ω" id="resistance_value" name="resistance">
-                <select name="precision" id="resistance_precision">
+                <input type="number" placeholder="Ω" id="resistance_value" name="resistance" class="inputs">
+                <select name="precision" id="resistance_precision" class="inputs">
                     <option value="">--Please choose a precision--</option>
                     <option value="1">1%</option>
                     <option value="2">2%</option>
@@ -69,11 +76,10 @@
                     <option value="10">10%</option>
                 </select>
 
-                <input type="button" value="calculate" id="calculate_colors" class="button" />
-
             </form>
 
-            <span id="color_0">_</span><span id="color_1">_</span><span id="color_2">_</span><span id="color_3">_</span>
+
+            <input type="button" value="calculate" id="calculate_colors" class="button" />
 
         </div>
 

@@ -2,7 +2,7 @@ const line_1 = document.getElementById("line_1");
 const line_2 = document.getElementById("line_2");
 const line_3 = document.getElementById("line_3");
 const line_4 = document.getElementById("line_4");
-const calculate_btn = document.getElementById("calculate");
+const line_5 = document.getElementById("line_5");
 const calculate_color_btn = document.getElementById("calculate_colors");
 const form = document.querySelector("form");
 
@@ -18,6 +18,7 @@ var precisionTab = {
 };
 
 var resistanceTab = {
+    none: "N/A",
     black: 0,
     brown: 1,
     red: 2,
@@ -54,7 +55,7 @@ function addEvents() {
     line_2.addEventListener("click", updateCurrent)
     line_3.addEventListener("click", updateCurrent)
     line_4.addEventListener("click", updateCurrent)
-    calculate_btn.addEventListener("click", calculate);
+    line_5.addEventListener("click", updateCurrent)
     calculate_color_btn.addEventListener("click", calculateColors);
 
     document.getElementById("none").addEventListener("click", updateValue);
@@ -85,7 +86,7 @@ function updateCurrent(event) {
 
 function updateValue(event) {
     console.log(event.target.id)
-    if (current == 4) {
+    if (current == 5) {
         value = precisionTab[event.target.id]
         document.getElementById("Selection_" + current).innerText = value
         current = 1
@@ -95,6 +96,7 @@ function updateValue(event) {
         current = parseInt(current) + 1
     }
     updateColor()
+    calculate()
 
 }
 
@@ -135,10 +137,19 @@ function updateColor() {
 }
 
 function calculate() {
-    total = (Selection_1.innerText + Selection_2.innerText) * (10 ** Selection_3.innerText)
-    total = Math.round((total) * 100000) / 100000
-    document.getElementById("Value").innerText = total + " Ω à +/- " + Math.round(((total / 100) * Selection_4.innerText) * 100000) / 100000 + " Ω"
 
+    console.log(Selection_1.innerText)
+    if (Selection_1.innerText == "N/A") {
+        console.log("tst")
+        total = (Selection_2.innerText + Selection_3.innerText) * (10 ** Selection_4.innerText)
+        total = Math.round((total) * 100000) / 100000
+        document.getElementById("Value").innerText = total + " Ω à +/- " + Math.round(((total / 100) * Selection_5.innerText) * 100000) / 100000 + " Ω"
+
+    } else {
+        total = (Selection_1.innerText + Selection_2.innerText + Selection_3.innerText) * (10 ** Selection_4.innerText)
+        total = Math.round((total) * 100000) / 100000
+        document.getElementById("Value").innerText = total + " Ω à +/- " + Math.round(((total / 100) * Selection_5.innerText) * 100000) / 100000 + " Ω"
+    }
 }
 
 function calculateColors() {
